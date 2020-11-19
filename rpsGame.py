@@ -1,0 +1,53 @@
+import random
+options = ['Rock','Paper','Scissors']
+def cpuPick(): #This function should allow the cpu to pick between RPS
+    cP = random.randint(0,2) #The indexes between 0-2 hold the values of RPS
+    cP = options[cP]
+    return cP
+    
+cP = cpuPick()
+def rpsGame(): #This is the logic of the game, this is where if/elif/ conditions
+               #are placed and different sublevels of code are.
+    cpuPick()
+    print("The CPU has chosen.")
+    uP = int(input("Rock = 0, Paper = 1, Scissors = 2: "))
+    uP = options[uP]
+    
+    if cP == uP:
+        print('Its A Stalemate! You Got To Beat This CPU.')
+    elif cP == 'Rock' and uP == 'Scissors':
+        print('Rock beats Scissors, cpu wins.')
+
+        print('Better Luck Next Time')
+    elif cP == 'Scissors' and uP == 'Rock':
+        print('Rock beats Scissors, user wins.')
+
+        print('Good Job, Beat The Machine!')
+    elif cP == 'Scissors' and uP == 'Paper':
+        print('Scissors beat Paper, cpu wins')
+
+        print('Better Luck Next Time')
+    elif cP == 'Paper' and uP == 'Scissors':
+        print('Scissors beat Paper, user wins.')
+
+        print('Good Job, Beat The Machine!')
+    elif cP == 'Paper' and uP == 'Rock':
+        print('Paper beats Rock, cpu wins')
+        print('Better Luck Next Time')
+    elif cP == 'Rock' and uP == 'Paper':
+        print('Paper beats rock, user wins.')
+        print('Good Job, Beat The Machine!')
+    else:
+        return None
+
+print("""
+Welcome To My RPS Game, Good Luck.
+""")
+print(options)
+rpsGame()
+
+        
+    
+    
+
+
